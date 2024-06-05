@@ -1,0 +1,192 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 3rem;
+}
+
+h1 {
+    color: azure;
+    font-size: 7rem;
+    margin: 0;
+}
+
+h2 {
+    color: lightgrey;
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 10px;    
+}
+
+.nav {
+    background-color: gold;
+    padding: 15px 5px;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav_bar {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav_opt {
+    border-left: 1px solid black;
+    height: 100%;
+}
+
+li a {
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 10px;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    transition: margin-left 0.2s, margin-right 0.2s;
+}
+
+li a:hover {
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav_img {
+    height: 30px;
+    margin-left: 15px;
+}
+
+.desc {
+    font-size: 2rem;
+    font-weight: 100;
+    margin: 0;
+    color: lightgrey;
+}
+
+.about, .gameplay, .story {
+    text-align: center;
+    background-color: rgba(0,0,0,0.9);
+    padding: 50px;
+}
+
+.roster {
+    padding: 50px 50px 20px;
+}
+
+.fps {
+    padding: 20px 50px 50px;
+}
+
+.title {
+    background-image: url("../Images/marvel-rivals-characters.jpg");
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 45vw; /* to ensure after animation logo is visible and at this size */
+    animation-name: logo_intro;
+    animation-duration: 2s;
+    animation-timing-function:ease-out ;
+}
+
+@keyframes logo_intro {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 45vw;
+    }
+}
+
+.gameplay_img, .story_img, .join_img {
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media  screen and (max-width: 1100px) {
+    .gameplay_img, .story_img, .join_img {
+        height: max-content;
+        background-size:cover;
+        background-position-y: 0;
+    }
+}
+
+.gameplay_img h1, .story_img h1, .join_img h1 {
+    font-family: "Bebas Neue";
+    padding:  30px 30px 20px;
+    transition: padding 0.2s;
+    text-shadow:0 0 10px  gold;
+    background-color: rgba(0,0,0,0.5);
+}
+.gameplay_img h1:hover, .story_img h1:hover {
+    padding: 35px 70px 25px;
+} 
+
+.gameplay_img {
+    background-image: url("../Images/marvel-rivals-new.webp");
+    background-position-y: -20px;
+}
+
+.story_img {
+    background-image: url("../Images/marvel-rivals-galacta.jpg");
+    background-position-y: -50px;
+}
+
+.join_img {
+    background-image: url("../Images/marvel-rivals-teamup.jpg");
+    background-position-y: -80px;
+}
+
+.join_img a {
+    text-decoration: none;
+}
+
+.join_img h1 {
+    transition: scale 0.2s;
+}
+.join_img h1:hover {
+    scale: 1.2;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: gold;
+    color: black;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+footer a {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-shadow: 1px 1px 2px  black;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 0;
+}
+
+.copyright {
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 1px 1px 2px  black;
+}
