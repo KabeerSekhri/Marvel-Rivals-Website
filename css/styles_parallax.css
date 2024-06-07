@@ -40,7 +40,7 @@ h2 {
     height: 100%;
 }
 
-li a {
+.nav_opt a {
     font-size: 2rem;
     font-weight: 900;
     margin: 10px;
@@ -50,7 +50,7 @@ li a {
     transition: margin-left 0.2s, margin-right 0.2s;
 }
 
-li a:hover {
+.nav_opt a:hover {
     color: white;
     margin-left: 20px;
     margin-right: 20px;
@@ -59,6 +59,42 @@ li a:hover {
 .nav_img {
     height: 30px;
     margin-left: 15px;
+}
+
+@media screen and (max-width: 720px) {
+    .nav {
+        height: 20vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav_bar {
+        justify-content: space-evenly;
+        padding: 0;
+    }
+    .nav_opt {
+        border-right: 1px solid black;
+        margin-left: 20px;
+    }
+    .nav_img {
+        width: 200px;
+        height: auto;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .nav {
+        height: max-content;
+    }
+    .nav_bar {
+        align-self: flex-start;
+        flex-direction: column;
+    }
+    .nav_opt {
+        border-right:0 ;
+    }
 }
 
 .desc {
@@ -119,14 +155,6 @@ li a:hover {
     align-items: center;
 }
 
-@media  screen and (max-width: 1100px) {
-    .gameplay_img, .story_img, .join_img {
-        height: max-content;
-        background-size:cover;
-        background-position-y: 0;
-    }
-}
-
 .gameplay_img h1, .story_img h1, .join_img h1 {
     font-family: "Bebas Neue";
     padding:  30px 30px 20px;
@@ -139,8 +167,8 @@ li a:hover {
 } 
 
 .gameplay_img {
-    background-image: url("../Images/marvel-rivals-new.webp");
-    background-position-y: -20px;
+    background-image: url("../Images/marvel-rivals-teamup.jpg");
+    background-position-y: -150px;
 }
 
 .story_img {
@@ -149,12 +177,22 @@ li a:hover {
 }
 
 .join_img {
-    background-image: url("../Images/marvel-rivals-teamup.jpg");
-    background-position-y: -80px;
+    background-image: url("../Images/marvel-rivals-new.webp");
+    background-position-y: -20px;
+}
+
+@media  screen and (max-width: 1150px) {
+    .join_img, .story_img, .gameplay_img {
+        background-position-y: 0;
+    }
 }
 
 .join_img a {
-    text-decoration: none;
+    color: azure;
+}
+
+.join_img a:hover {
+    color: gold;
 }
 
 .join_img h1 {
@@ -176,9 +214,12 @@ footer {
 footer a {
     margin: 0;
     padding: 0;
+    color: black;
+    font-style: italic;
+}
+
+footer a:hover {
     color: white;
-    text-shadow: 1px 1px 2px  black;
-    text-decoration: none;
 }
 
 footer p {
@@ -187,6 +228,6 @@ footer p {
 
 .copyright {
     font-size: 1.5rem;
-    color: white;
-    text-shadow: 1px 1px 2px  black;
+    color: azure;
+    text-shadow: 0px 0px 4px  black;
 }
